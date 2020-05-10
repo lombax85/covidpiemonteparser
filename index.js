@@ -2,6 +2,7 @@ var request = require('request');
 var https = require("https");
 let express = require('express');
 let app = express();
+const PORT = process.env.PORT || 5000
 
 main();
 
@@ -24,7 +25,7 @@ async function main() {
 
     });
 
-    app.listen(5000, function () {
+    app.listen(PORT, function () {
         console.log('Listening on port 3000!');
     });
 }
